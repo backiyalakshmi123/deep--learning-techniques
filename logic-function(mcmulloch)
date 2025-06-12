@@ -1,0 +1,52 @@
+# AND Gate
+def AND(x1, x2):
+    if x1 == 1 and x2 == 1:
+        return 1
+    else:
+        return 0
+
+# OR Gate
+def OR(x1, x2):
+    if x1 == 1 or x2 == 1:
+        return 1
+    else:
+        return 0
+
+# NOT Gate
+def NOT(x1):
+    return 1 if x1 == 0 else 0
+
+# NOR Gate
+def NOR(x1, x2):
+    if x1 == 0 and x2 == 0:
+        return 1
+    else:
+        return 0
+
+# XOR Gate
+def XOR(x1, x2):
+    if x1 != x2:
+        return 1
+    else:
+        return 0
+
+# Testing
+print("AND")
+for x in [(0, 0), (0, 1), (1, 0), (1, 1)]:
+    print(f"{x} -> {AND(*x)}")
+
+print("\nOR")
+for x in [(0, 0), (0, 1), (1, 0), (1, 1)]:
+    print(f"{x} -> {OR(*x)}")
+
+print("\nNOT")
+for x in [0, 1]:
+    print(f"{x} -> {NOT(x)}")
+
+print("\nNOR")
+for x in [(0, 0), (0, 1), (1, 0), (1, 1)]:
+    print(f"{x} -> {NOR(*x)}")
+
+print("\nXOR")
+for x in [(0, 0), (0, 1), (1, 0), (1, 1)]:
+    print(f"{x} -> {XOR(*x)}")
